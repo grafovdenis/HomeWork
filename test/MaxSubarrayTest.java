@@ -1,14 +1,8 @@
 import org.junit.Test;
 
-public class MaxSubarrayTest {
+import static org.junit.Assert.assertArrayEquals;
 
-    private static void assertEquals(int[] a, int[] b) {
-        if (a.length == b.length) {
-            for (int i = 0; i < a.length; i++) {
-                assert a[i] == b[i];
-            }
-        } else assert false;
-    }
+public class MaxSubarrayTest {
 
     @Test
     public void maxSubarray() {
@@ -19,8 +13,8 @@ public class MaxSubarrayTest {
         int[] a3 = {};
         int[] b3 = {-1, -1};
 
-        assertEquals(a1, MaxSubarray.maxSubarray(b1));
-        assertEquals(a2, MaxSubarray.maxSubarray(b2));
-        assertEquals(a3, MaxSubarray.maxSubarray(b3));
+        assertArrayEquals(a1, MaxSubarray.maxSubarray(b1));
+        assertArrayEquals(a2, MaxSubarray.maxSubarray(b2));
+        assertArrayEquals(a3, MaxSubarray.maxSubarray(b3));
     }
 }
